@@ -25,16 +25,16 @@ function sum(num1, num2) {
     MAIN
 -------------------*/
 let oddEven = prompt('Scegli tra "pari" e "dispari" e scrivilo nel promp');
-console.log(oddEven);
+console.log(`La tua scelta è: ${oddEven}`);
 
 let userNumber = Number(prompt("Scegli un numero da 1 a 5"));
-console.log(userNumber);
+console.log(`Il numero da te scelto è: ${userNumber}`);
 
 let randomNumBot = getRndInteger(1, 5);
-console.log(randomNumBot);
+console.log(`Il numero del computer è: ${randomNumBot}`);
 
 let total = sum(userNumber, randomNumBot);
-console.log(total)
+console.log(`Il totale è: ${total}`)
 
 // Scrivo le condizioni di vittoria
 if ((oddEven === "pari" && isEven(total)) || (oddEven === "dispari" && !isEven(total))){
