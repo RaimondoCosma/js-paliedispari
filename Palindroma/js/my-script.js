@@ -25,7 +25,7 @@ function isPalindrome(element, concElement, palElement){
 /*-----------------------
     MAIN
 -----------------------*/
-// Chiamo direttamente la funzione
+// Richiamo direttamente la funzione
 isPalindrome(prompt('Inserisci una parola'));
 
 // Metodo con variabili
