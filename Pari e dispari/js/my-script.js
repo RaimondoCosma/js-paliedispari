@@ -31,13 +31,18 @@ while ( oddEven !== 'pari' || oddEven !== 'dispari' ) {
     if ( oddEven === 'pari' || oddEven === 'dispari' ) {
         break;
     }
+    alert(`${oddEven} non è pari o dispari`);
 }
 console.log(`La tua scelta è: ${oddEven}`);
 
 // Aggiungo validazione all'imput in modo che il numero scelto dall'utente non sia una stringa e sia un numero compreso tra 1 e 5
 let userNumber;
 while ( isNaN(userNumber) || (userNumber < 1 || userNumber > 5) ) {
-    userNumber = Number(prompt('Sccegli un numero da 1 a 5'));
+    userNumber = Number(prompt('Scegli un numero da 1 a 5'));
+    if ( !isNaN(userNumber) && (userNumber >= 1 && userNumber <= 5) ) {
+        break;
+    }
+    alert(`Attenzione! ${userNumber} non è un numero da 1 a 5`);
 }
 console.log(`Il numero da te scelto è: ${userNumber}`);
 
