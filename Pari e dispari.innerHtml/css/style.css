@@ -1,0 +1,134 @@
+/* ---------------------------------
+    RESET   
+--------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------
+    COMMONS   
+--------------------------------- */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to left top, #73adde, #00c2da, #2ad0ac, #98d369, #f8c544);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 56.25rem;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+}
+h3 {
+    font-size: 1.875rem;
+}
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 2.5rem;
+}
+.description {
+    margin-bottom: .625rem;
+    font-size: 1.25rem;
+}
+.choose, .choose-number {
+    width: 50%;
+    margin-bottom: 1.25rem;
+}
+#your-number, #odd-even {
+    padding: .1875rem .625rem;
+}
+.shake {
+    animation: shake 0.4s ease-in-out;
+    border: 1px solid red;
+}
+.zoom-in {
+    animation: zoom-in 0.3s ease-in-out;
+}
+#warning-choose, #warning-choose-number, .bot-number, .total, #banner {
+    color: red;
+    width: fit-content;
+    opacity: 0;
+    transition: 0.4s linear;
+}
+#warning-choose-number {
+    margin-left: auto;
+}
+.bot-number, .total {
+    font-size: 3.75rem;
+    color: blueviolet;
+}
+#banner {
+    font-size: 4.375rem;
+}
+.choose-number {
+    text-align: right;
+}
+.show {
+    opacity: 1 !important;
+    transition: 0.4s linear;
+}
+#submit-btn, #reset-btn {
+    padding: .3125rem 1.25rem;
+    margin-right: 1.25rem;
+    cursor: pointer;
+}
+#submit-btn:active, #reset-btn:active {
+    transform: scale(0.94);
+}
+.output {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.col {
+    text-align: center;
+    width: 30%;
+    padding: 1.25rem .625rem;
+}
+.banner-col {
+    width: 100%;
+    text-align: center;
+    padding: 1.25rem .625rem;
+}
+
+/* -------------
+    KEYFRAMES
+------------- */
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+    
+@keyframes zoom-in {
+    from {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

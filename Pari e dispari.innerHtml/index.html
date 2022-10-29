@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pari e dispari</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GIOCA A PARI E DISPARI</h1>
+        <form>
+            <div class="choose">
+                <div class="description"><label for="odd-even">Scegli tra "pari" e "dispari"</label></div>
+                <input type="text" name="choose" id="odd-even" placeholder="'pari' o 'dispari'">
+                <div id="warning-choose"><label for="odd-even">Inserisci Stringa</label></div>
+            </div>
+            <div class="choose-number">
+                <div class="description"><label for="your-number">Scegli un numero da "1" a "5"</label></div>
+                <input type="number" name="number" min="1" max="5" id="your-number">
+                <div id="warning-choose-number"><label for="your-number">Inserisci numero</label></div>
+            </div>
+            <button id="submit-btn" type="button">Tenta la Fortuna</button>
+            <button id="reset-btn" type="button">Reset</button>
+        </form>
+        <div class="output">
+            <div class="col">
+                <h3>Numero BOT</h3>
+                <span class="bot-number">default</span>
+            </div>
+            <div class="col">
+                <h3>Totale</h3>
+                <span class="total">default</span>
+            </div>
+            <div class="banner-col">
+                <h3>Risultato</h3>
+                <span id="banner"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/my-script.js"></script>
+</body>
+</html>

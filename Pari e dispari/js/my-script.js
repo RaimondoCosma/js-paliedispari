@@ -22,7 +22,7 @@ function sum(num1, num2) {
 }
 
 /*-------------------
-    MAIN
+    MAIN CONSOLE LOG
 -------------------*/
 // Aggiungo validazione all'input in modo che l'utente possa scrivere o "pari" o "dispari"
 let oddEven;
@@ -31,7 +31,7 @@ while ( oddEven !== 'pari' || oddEven !== 'dispari' ) {
     if ( oddEven === 'pari' || oddEven === 'dispari' ) {
         break;
     }
-    alert(`${oddEven} non è pari o dispari`);
+    alert(`"${oddEven}" non è pari o dispari`);
 }
 console.log(`La tua scelta è: ${oddEven}`);
 
@@ -42,7 +42,7 @@ while ( isNaN(userNumber) || (userNumber < 1 || userNumber > 5) ) {
     if ( !isNaN(userNumber) && (userNumber >= 1 && userNumber <= 5) ) {
         break;
     }
-    alert(`Attenzione! ${userNumber} non è un numero da 1 a 5`);
+    alert(`Attenzione! "${userNumber}" non è un numero da 1 a 5`);
 }
 console.log(`Il numero da te scelto è: ${userNumber}`);
 
@@ -54,7 +54,7 @@ console.log(`Il totale è: ${total}`)
 
 // Scrivo le condizioni di vittoria
 if ((oddEven === "pari" && isEven(total)) || (oddEven === "dispari" && !isEven(total))){
-    alert('Complimenti hai Vinto!');
+        alert('Complimenti hai Vinto!');
 } else {
     alert('Mi dispiace hai perso!');
 }
