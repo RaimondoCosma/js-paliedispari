@@ -102,14 +102,26 @@ submitBtn.addEventListener('click', function() {
 
     // Aggiungo le condizioni di vittoria con relativo messaggio in caso di vittoria o sconfitta
     if ((oddEven === "pari" && isEven(total)) || (oddEven === "dispari" && !isEven(total))){
-        bannerSpan.classList.add('show');
         setTimeout (function() {
             let banner = document.getElementById('banner').innerHTML = `<span style="color: green; font-style: italic;">Complimenti! Hai Vinto</span>`;
-        }, 500);
+            bannerSpan.classList.add('show','zoom-in');
+        }, 1000);
     } else {
-        bannerSpan.classList.add('show');
         setTimeout (function() {
             let banner = document.getElementById('banner').innerHTML = "Mi Dispiace! Hai Perso";
+            bannerSpan.classList.add('show','zoom-in');
+        }, 1000);
+    }
+    let whoWin = document.getElementById('who-win');
+    if ( isEven(total) ) {
+        setTimeout (function(){
+            whoWin.innerHTML = `<span style="color: blue; font-size: 30px">Pari Vince!</span>`;
+            whoWin.classList.add('show');
+        }, 500);
+    } else {
+        setTimeout (function(){
+            whoWin.innerHTML = `<span style="color: blue; font-size: 30px">Dispari Vince!</span>`;
+            whoWin.classList.add('show');
         }, 500);
     }
 });
@@ -120,6 +132,7 @@ resetBtn.addEventListener('click', function(){
     let bannerSpan = document.querySelector('#banner');
     let totalSpan = document.querySelector('.total');
     let botNumberSpan = document.querySelector('.bot-number');
+    let whoWin = document.getElementById('who-win');
     const oddEven = document.getElementById('odd-even');
     oddEven.value ="";
     const yourNumber = document.getElementById('your-number');
@@ -127,7 +140,9 @@ resetBtn.addEventListener('click', function(){
     botNumberSpan.classList.remove('show');
     botNumberSpan = "";
     totalSpan.classList.remove('show');
-    bannerSpan.classList.remove('show');
+    whoWin.innerHTML = "";
+    bannerSpan.classList.remove('show','zoom-in');
+    bannerSpan.innerHTML = "";
     warningChoose.classList.remove('show','zoom-in');
     warningChooseNumber.classList.remove('show','zoom-in')
     return resetBtn;

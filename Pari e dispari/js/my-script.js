@@ -22,7 +22,7 @@ function sum(num1, num2) {
 }
 
 /*-------------------
-    MAIN CONSOLE LOG
+    MAIN
 -------------------*/
 // Aggiungo validazione all'input in modo che l'utente possa scrivere o "pari" o "dispari"
 let oddEven;
