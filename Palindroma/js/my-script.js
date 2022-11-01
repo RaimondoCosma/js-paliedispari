@@ -4,15 +4,15 @@
 -----------------------*/
 function isPalindrome(element){
     let concElement = '';
-    for ( let i=0; i < element.length; i++) {
+    for ( let i = 0; i < element.length; i++) {
         concElement += element[i];
     }
     let palElement = '';
-    for ( let i=element.length - 1; i >= 0; i--) {
+    for ( let i = element.length - 1; i >= 0; i--) {
         palElement += element[i];
     }
     console.log(`${concElement} ==> ${palElement}`);
-    if ( concElement === palElement ) {
+    if ( concElement.replace(/\W/g, "").toLowerCase() === palElement.replace(/\W/g, "").toLowerCase() ) {
         return true;
     } 
     return false;
